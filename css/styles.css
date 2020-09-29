@@ -26,6 +26,7 @@ body{
 ul{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 a{
@@ -71,6 +72,7 @@ a{
     width: 100%;
     border-bottom: 1px solid var(--gray);
     position: fixed;
+    height: 50px;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -98,7 +100,7 @@ a{
 
 @media(min-width:768px){
     .navbar{
-        grid-template-columns: 15% 75% 10%;
+        grid-template-columns: 20% 60% 20%;
     }
 }
 
@@ -111,14 +113,13 @@ a{
 .main-menu-end i{
     line-height: 50px;
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: pointer;;
 }
 
 .main-menu{
     position: absolute;
     top: 100%;
     height: 100vh;
-    width: 70%;
     left: -100%;
     background-color: #22303A;
     color: #e1e1e1;
@@ -126,7 +127,7 @@ a{
     margin: 0;
 }
 
-.main-menu ul div{
+.main-menu ul a{
     padding: .7rem 0;
     text-align: center;
     font-size: 1rem;
@@ -146,16 +147,27 @@ a{
     }
 
     .menu-list{
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         color: #22303A;
-        align-items: center;
         height: 100%;
-        grid-template-columns: repeat(3,1fr);
     }
 
-    .menu-list div{
-        margin-left: 6rem;
+    .menu-list a{
+        height: 100%;
+        line-height: 53px;
         cursor: pointer;
+    }
+
+    .menu-list a:hover{
+        background-color: #22303A;
+        color: #ffffff;
+        transition: all .3s ease-in;
+    }
+
+    .main-menu-end{
+      display: flex;
+        align-self: center;
     }
 
 }
@@ -165,22 +177,50 @@ a{
 /*  hero banner */ 
 
 .hero{
+    padding-top: 3rem;
     width: 100%;
     background-color: #22303A;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media(min-width:768px){
-    .hero{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+   .hero{
+       min-height: 100vh;
+   }
 }
 
 .title{
     color: #ffffff;
     font-size: 2rem;
     text-transform: uppercase;
-    transform: translateY(37.5px);
+    
+}
+
+
+
+
+
+@media(min-width:768px){
+    .count-down{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .count-down-ul{
+       padding: 2rem 0;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .count-down-ul li:first-of-type{
+        margin-top: none;
+    }
+}
+
+
+.count-down-ul li{
+    color: white;
+    margin-top: 3rem;
+    font-size: 2rem;
 }
