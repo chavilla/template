@@ -6,9 +6,10 @@
     <title>Template</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css" integrity="sha512-8jdwayz5n8F2cnW26l9vpV6+yGOcRAqz6HTu+DQ3FtVIAts2gTdlFZOGpYhvBMXkWEgxPN3Y22UWyZXuDowNLA==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/app.js"></script>
 </head>
@@ -19,35 +20,38 @@
                 <div class="c-logo">CHAVIWEB</div>
                 <div class="main-menu">
                     <ul class="menu-list">
-                       
-                            <a href="#">Inicio</a>
-                       
-                       
-                            <a href="#">Tienda</a>
-                       
-                       
-                            <a href="#">Carrito</a>
-                       
-                       
-                            <a href="#">Nosotros</a>
-                       
+                        <div>
+                            <button id="exitMenu" type="button"></button>
+                            <iframe src="img/salida.svg" frameborder="0"></iframe> 
+                        </div>
+                        <a href="#">Inicio</a>
+                        <a href="#">Tienda</a>
+                        <a href="#">Carrito</a>
+                        <a href="#">Nosotros</a>
                     </ul>
                 </div>
-                <div class="main-menu-end">
+                <div class="phone">
+                    <iframe src="img/telefono.svg" frameborder="0"></iframe>
+                    <p>6485-3720</p>
+                </div>
+                <div class="icon-div">
                     <div>
-                        <i class="fas fa-user-alt color-icon icon-awesome-header"></i>
+                        <button type="button" id="btnShowMenu"></button>
+                        <iframe src="img/menu.svg" frameborder="0"></iframe>
                     </div>
-                    <div id="header-toggle">
-                        <i class="fas fa-bars color-icon"></i>
-                    </div>
+                    <p>Menú</p>
                 </div>
             </nav>
        </header>
        <div class="hero">
-           <h2 class="title text-center">Innovación y Precios bajos </h2>
+           <div class="hero-img">
+           </div>
+           <div class="container">
+            <h2 class="title text-center">Innovación y Precios bajos</h2>
+           </div>
        </div>
        <section class="section">
-        
+            <h2 class="title-services text-center">Servicios</h2>
        </section>
     </div>
 </body>
