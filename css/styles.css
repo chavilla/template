@@ -163,6 +163,11 @@ section{
     padding: .5rem;
 }
 
+.c-logo iframe{
+    height: 200px;
+    width: 200px;
+}
+
 .phone{
     flex-basis: 100%;
     order: 1;
