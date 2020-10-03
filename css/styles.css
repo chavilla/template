@@ -2,7 +2,7 @@
 
 :root{
     --dark: #22303A;
-    --gray: #e1e1e1;
+    --gray: #FBFBFE;
     --grayMedium: #CFD8DC;
     --grayDark: #53575A;
     --fontRoboto: 'Roboto', sans-serif;
@@ -73,8 +73,8 @@ section{
 }
 
 /* General container */
-.next{
-   
+.bg-gray{
+    background-color: var(--gray);
 }
 
 .container{
@@ -91,7 +91,7 @@ section{
     top: 0;
     left: 0;
     box-shadow: 0px 6px 8px -6px rgba(83,87,90,1);
-    height: 170px;
+    height: 90px;
     background-color: #ffffff;
     z-index: 1;  
 }
@@ -105,7 +105,7 @@ section{
 .navbar{
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     z-index: inherit;
 }
 
@@ -117,12 +117,12 @@ section{
 
 @media(min-width:768px){
     .navbar{
+        display: grid;
         grid-template-columns: 20% 60% 20%;
     }
 }
 
-.icon-div{
-    order: 3;
+.menu-zone{
     margin: 0 auto;
     padding: 1rem;
     display: flex;
@@ -130,11 +130,11 @@ section{
     cursor: pointer;
 }
 
-.icon-div div{
+.menu-zone div{
     position: relative;
 }
 
-.icon-div div button{
+.menu-zone div button{
     position: absolute;
     height: 25px;
     width: 25px;
@@ -143,20 +143,18 @@ section{
 }
 
 
-.icon-div div iframe{
+.menu-zone div iframe{
     width: 25px;
     height: 25px;
     margin-right: .3rem;
 }
 
-.icon-div p{
+.menu-zone p{
     font-size: 1rem;
     margin-left: .3rem;
 }
 
 .c-logo{
-    order: 1;
-    flex-basis: 50%;
     justify-content: center;
     align-items: center;
     padding: .5rem;
@@ -168,29 +166,6 @@ section{
     height: 34px;
     width: 98px;
     border: none;
-}
-
-.phone{
-    flex-basis: 50%;
-    order: 2;
-    display: flex;
-    padding: 1rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.phone iframe{
-    width: 15px;
-    height: 15px;
-    margin-right: .2rem;
-    cursor: pointer;
-}
-
-.phone p{
-    font-size: .7rem;
-    margin-left: .2rem;
-    font-weight: 700;
 }
 
 .main-menu{
@@ -254,8 +229,9 @@ section{
 @media(min-width:768px){
 
     .main-menu{
+        display: block;
         position: static;
-        height: auto;
+        height: 75px;
         background-color: #ffffff;
     }
 
@@ -264,6 +240,10 @@ section{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         color: #22303A;
         height: 100%;
+    }
+
+    .menu-list div{
+        display: none;
     }
 
     .menu-list a{
@@ -277,9 +257,8 @@ section{
         transition: all .3s ease-in;
     }
 
-    .phone{
-      display: flex;
-        align-self: center;
+    .menu-zone{
+        display: none;
     }
 
 }
@@ -289,7 +268,7 @@ section{
 /*  hero banner */ 
 
 .hero{
-    margin-top: 170px;
+    margin-top: 75px;
     padding-top: .3rem;
     width: 100%;
     position: relative;
@@ -306,7 +285,7 @@ section{
     background-image: url(../img/hero.jpg);
     background-position: bottom left;
     height: 100%;
-    filter: brightness(.6);
+    filter: brightness(.5);
     width: 100%;
     z-index: -1;
 }
@@ -314,16 +293,59 @@ section{
 .title{
     color: #ffffff;
     font-size: 2.2rem;
+    font-weight: 400;
     z-index: 1;
+    position: relative;
+    transition: all .2s ease-in;
+    z-index: -1;
+}
+
+
+.btn-main{
+    border: 1px solid white;
+    display: block;
+    width: 50%;
+    padding: 1rem;
+    margin: 3rem auto;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+.btn-main:hover{
+    background-color: rgba(83,87,90,0.3);
+}
+
+.translate-left{
+    transform:translateX(-100%);
+}
+
+.translate-right{
+    transform:translateX(300%);
 }
 
 
 @media(min-width:768px){
    .hero{
-       min-height: 100vh;
+       min-height: 70vh;
+   }
+
+   .title{
+       font-size: 3.6rem;
+   }
+
+   .title span{
+       right: 215px;
+   }
+
+   .btn-main{
+       width: 25%;
    }
 }
 
+
+/* anima el titulo*/
 
 
 
@@ -333,3 +355,8 @@ section{
     color: var(--dark);
     font-size: 2.4rem;
 }
+
+.section{
+    height: 900px;
+}
+
