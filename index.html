@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/fontawesome.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -72,12 +71,20 @@
             <a href="#">Nosotros</a>
           </ul>
         </div>
-        <div class="menu-zone">
-          <div>
-            <button type="button" id="btnShowMenu"></button>
-            <iframe src="img/menu.svg" frameborder="0"></iframe>
+        <div class="menu-zone container">
+          <div class="col-first">
+            <div class="btn-span">
+              <button type="button" id="btnShowMenu"></button>
+              <div class="menu-movil">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
           </div>
-          <p>Menú</p>
+          <div class="col-second">
+            <p>Menú</p>
+          </div>
         </div>
       </nav>
     </header>

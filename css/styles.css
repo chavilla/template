@@ -2,6 +2,7 @@
 
 :root{
     --dark: #22303A;
+    --dark2: #263b4b;
     --gray: #F5F5F5;
     --grayDark: #53575A;
     --bluePrimary: #94b7ee;
@@ -204,7 +205,7 @@ div.looker-btn img{
 }
 
 .c-logo{
-    padding: 1rem 0 2.2rem 0;
+    padding: 1rem 0 1.5rem 0;
 }
 
 .c-logo img{
@@ -213,36 +214,68 @@ div.looker-btn img{
 }
 
 .menu-zone{
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 1rem auto;
+    padding: 0;
     flex-basis: 100%;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    background-color: var(--dark);
 }
 
-.menu-zone div{
+.menu-zone .col-first{
+    padding: .5rem;
+}
+
+.menu-zone .col-second{
+    background-color: var(--dark2);
+    padding: .7rem;
+    width: 100%;
+}
+
+.menu-zone .btn-span{
     position: relative;
+    width: 25px;
+    height: 25px;
 }
 
 .menu-zone div button{
     position: absolute;
     height: 25px;
+    z-index: 1;
     width: 25px;
     border: none;
     background: transparent;
 }
 
-
-.menu-zone div iframe{
+div.menu-movil{
     width: 25px;
     height: 25px;
-    margin-right: .3rem;
 }
+
+div.menu-movil:hover{
+    cursor: pointer;
+}
+
+div.menu-movil span{
+    background-color:#ffffff;
+    width: 100%;
+    margin: auto;
+    height: 3px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width:768px){
+    div.menu-movil{
+        display: none;
+    }
+}
+
 
 .menu-zone p{
     font-size: 1rem;
     margin-left: .3rem;
+    color: #ffffff;
 }
 
 
