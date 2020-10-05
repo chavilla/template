@@ -204,13 +204,12 @@ div.looker-btn img{
 }
 
 .c-logo{
-    margin: 0 auto;
     padding: 1rem 0 2.2rem 0;
 }
 
-.c-logo iframe{
-    height:100%;
-    width: 100%;
+.c-logo img{
+    height:55px;
+    width: 150px;
 }
 
 .menu-zone{
