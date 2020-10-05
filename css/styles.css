@@ -2,9 +2,9 @@
 
 :root{
     --dark: #22303A;
-    --gray: #FBFBFE;
-    --grayMedium: #CFD8DC;
+    --gray: #F5F5F5;
     --grayDark: #53575A;
+    --bluePrimary: #94b7ee;
     --fontRoboto: 'Roboto', sans-serif;
     --heightBanner: 100vh;
     --heightNavbar: 50px;
@@ -13,6 +13,7 @@
 
 html{
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 *,*::before,*::after{
     box-sizing: inherit;
@@ -44,6 +45,11 @@ section{
     padding-top: 3rem;
 }
 
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
 /* Generals color */
 
 .bg-light{
@@ -60,26 +66,36 @@ section{
     text-align: center;
 }
 
+iframe{
+    width: 15px;
+    height: 15px;
+    border: none;
+}
 
-.color-icon{
+/* Div contact styles */
+
+div.info-contact{
+    background-color: var(--gray);
+    padding: 1rem 0;
+
+}
+
+div.info-contact iframe{
+    margin-right: 5px;
+}
+
+ul.list-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--grayDark);
 }
 
-.c-logo{
-    font-size: 1.5rem;
-    font-family: var(--fontRoboto);
-    font-weight: 400;
-    align-self: center;
-}
-
-/* General container */
-.bg-gray{
-    background-color: var(--gray);
-}
-
-.container{
-    width: 95%;
-    margin: 0 auto;
+ul.list-contact li{
+    flex-basis: 50%;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
 }
 
 /* Header styles */
@@ -87,11 +103,7 @@ section{
 .site-header{
     width: 100%;
     border-bottom: 1px solid var(--gray);
-    position: fixed;
-    top: 0;
-    left: 0;
     box-shadow: 0px 6px 8px -6px rgba(83,87,90,1);
-    height: 90px;
     background-color: #ffffff;
     z-index: 1;  
 }
@@ -105,6 +117,7 @@ section{
 .navbar{
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     z-index: inherit;
 }
@@ -122,9 +135,92 @@ section{
     }
 }
 
+/* car y looker */
+
+div.car-looker{
+    display: flex;
+    align-items: center;
+}
+
+div.car{
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    padding: .6rem 0;
+    background-color: var(--bluePrimary);
+}
+
+div.car-logo{
+    flex-basis: 30%;
+    padding-left: 15px;
+}
+
+div.car-price{
+    flex-basis: 70%;
+    font-size: .9rem;
+    text-align: right;
+    margin-left: 10px;
+    padding-right: 15px;
+    color: #ffffff;
+    font-weight: bold;    
+}
+
+div.looker{
+    flex-basis: 70%;
+    margin-left: 10px;
+    display: flex;
+    padding: .4rem 0;
+    background-color: var(--gray);
+}
+
+div.looker-input{
+    border: none;
+    flex-basis: 80%;
+    background-color: var(--gray);
+}
+
+div.looker-input input{
+    padding: .5rem 0;
+    border: none;
+    background-color: var(--gray);
+}
+
+div.looker-btn{
+    flex-basis: 20%;
+    position: relative;
+}
+
+div.looker-btn button{
+    position: absolute;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+div.looker-btn img{
+    height: 25px;
+    width: 25px;
+}
+
+.c-logo{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.c-logo iframe{
+    height: 45px;
+    width: 98px;
+    border: none;
+}
+
 .menu-zone{
     margin: 0 auto;
     padding: 1rem;
+    flex-basis: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -154,27 +250,15 @@ section{
     margin-left: .3rem;
 }
 
-.c-logo{
-    justify-content: center;
-    align-items: center;
-    padding: .5rem;
-    width: 110px;
-    height: 50px;
-}
-
-.c-logo iframe{
-    height: 34px;
-    width: 98px;
-    border: none;
-}
 
 .main-menu{
     position: absolute;
+    flex-basis: 100%;
     top: 0;
     height: 100vh;
     display: none;
     width: 100%;
-    background-color:var(--grayMedium);
+    background-color: var(--grayDark);
     color: #e1e1e1;
     padding: 0;
     margin: 0;
@@ -190,14 +274,20 @@ section{
     display: block;
 }
 
-.main-menu ul a{
+.menu-list{
     padding: .7rem 0;
-    border-bottom: 1px solid var(--gray);
     opacity: .8;
     width: 100%;
     text-align: center;
     font-size: 1rem;
     display: block;
+}
+
+.menu-list a{
+    color: #ffffff;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: .5px solid #ffffff;
 }
 
 .menu-list{
@@ -268,11 +358,11 @@ section{
 /*  hero banner */ 
 
 .hero{
-    margin-top: 75px;
+    
     padding-top: .3rem;
     width: 100%;
     position: relative;
-    min-height: 70vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,7 +394,7 @@ section{
 .btn-main{
     border: 1px solid white;
     display: block;
-    width: 50%;
+    width: 75%;
     padding: 1rem;
     margin: 3rem auto;
     color: #ffffff;
