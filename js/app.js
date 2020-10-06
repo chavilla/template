@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
   window.onresize=function(e){
     const widthOfWindow=window.innerWidth;
     if (widthOfWindow>=768) {
-      fadeIn(menu);
+      fadeOut(menu);
     }else{
       menu.style.display='none';
     }
