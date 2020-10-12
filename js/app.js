@@ -90,7 +90,7 @@ window.addEventListener("load", () => {
 
   }
 
-  writing('Innovación y Precios bajos Con Chaviweb');
+  writing('Viajar es más facil con ChaviTravel');
  
 
 });

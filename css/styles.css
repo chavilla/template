@@ -478,10 +478,10 @@ div.menu-movil span{
 
 .hero-img{
     position: absolute;
-    background-image: url(../img/hero.jpg);
-    background-position: bottom left;
+    background-image: url(../img/hero2.jpg);
+    background-position: center;
     height: 100%;
-    filter: brightness(.5);
+    filter: brightness(.4);
     width: 100%;
     z-index: -1;
 }
@@ -558,12 +558,96 @@ div.menu-movil span{
 
 /*  Services ----- */
 
-.title-services{
-    color: var(--dark);
-    font-size: 2.4rem;
+.section{
+    background-color: var(--gray);
+    padding-bottom: 3rem;
 }
 
-.section{
-    height: 900px;
+.title-services{
+    color: var(--dark);
+    font-size: 2.8rem;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title-services::before{
+    content: '';
+    left: 50%;
+    top: 115%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 5px;
+    width: 100px;
+    background-color: var(--dark);
+    animation-name: title-services;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes title-services {
+ from {
+     width: 0;
+ }
+ to{
+     width: 100%;
+ }
+}
+
+@media(min-width:758px){
+    .title-services{
+        width: 20%;
+    }
+
+    .title-services::before{
+        width: 20%;
+    }
+}
+
+
+.card-zone{
+    margin-top: 3rem;
+}
+
+.card-container{
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 6px .2px rgba(83,87,90,0.5);
+}
+
+.card{
+    padding-bottom: .4rem;
+}
+
+.card img{
+    width: 100%;
+    margin-bottom: .4rem;
+}
+
+.card-content{
+    padding: 1rem 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.card p{
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+.card h3{
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+.card .description-travel{
+    margin-top: .7rem;
+    margin-bottom: 1.5rem;
+}
+
+.card .link-more{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--dark);
+    font-weight: bold;
 }
 
