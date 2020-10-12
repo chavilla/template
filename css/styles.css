@@ -28,6 +28,19 @@ body{
     background-color: #ffffff;
 }
 
+div.overlay{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .6;
+}
+
+.dark{
+    background-color: var(--grayDark);
+    filter: brightness(.2);
+}
 
 @media(min-width:768px){
     body{
@@ -356,18 +369,19 @@ div.menu-movil span{
 
 
 .main-menu{
-    position: absolute;
+    position: fixed;
     top: 0;
-    height: 100vh;
+    min-height: 100%;
     display: none;
-    width: 100%;
-    background-color: var(--dark);
-    color: #e1e1e1;
+    width: 75%;
+    background-color: var(--gray);
+    color: var(--dark2);
     padding: 0;
     margin: 0;
     z-index: 1000;
-    transition: all .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 
 .main-menu-lg{
     display: none;
@@ -391,10 +405,11 @@ div.menu-movil span{
 }
 
 .menu-list a{
-    color: #ffffff;
+    color: var(--dark);
+    font-size: 1.3rem;
     width: 100%;
     padding: 1rem 0;
-    border-bottom: .5px solid #ffffff;
+    
 }
 
 .menu-list{
@@ -487,7 +502,7 @@ div.menu-movil span{
 }
 
 .hero-title{
-    width: 100%;
+    width: 90%;
 }
 
 .title{
@@ -508,7 +523,7 @@ div.menu-movil span{
     padding: 1rem;
     margin: 3rem auto;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: .8rem;
     text-transform: uppercase;
     transition: all .2s linear;
 }

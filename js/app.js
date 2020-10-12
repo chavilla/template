@@ -3,9 +3,10 @@
 window.addEventListener("load", () => {
 
   // Variables globales
-  const menu = document.querySelector(".main-menu");
+  const menu = document.querySelector('.main-menu');
   const title = document.querySelector('#title');
   const btnMain= document.querySelector('#btnMain');
+  const overlay= document.querySelector('#overlay');
 
   function toggleMenu() {
     //Identifica el boton de salir y el menú
@@ -14,11 +15,13 @@ window.addEventListener("load", () => {
     
 
     btnExitMenu.addEventListener("click", () => {
-     fadeOut(menu)
+     fadeOut(menu);
+     overlay.classList.remove('overlay');
     });
 
     btnShowMenu.addEventListener("click", () => {
      fadeIn(menu);
+     overlay.classList.add('overlay');
     });
   } // end toggleMenu
 
