@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 
     btnExitMenu.addEventListener("click", () => {
      fadeOut(menu);
-     overlay.classList.remove('overlay');
+    
     });
 
     btnShowMenu.addEventListener("click", () => {
@@ -35,6 +35,7 @@ window.addEventListener("load", () => {
         requestAnimationFrame(fade);
       }
     })();
+    overlay.classList.remove('overlay');
   };
   
   function fadeIn(el, display){
@@ -65,8 +66,6 @@ window.addEventListener("load", () => {
 
 
   //Oculta el título y muestra a los tres segundos
- 
-
   setTimeout(()=>{
     btnMain.classList.remove('translate-right');
   },1000);
@@ -94,6 +93,21 @@ window.addEventListener("load", () => {
   }
 
   writing('Viajar es más facil con ChaviTravel');
- 
 
+
+  //Oculta el menu cuando pulsamos afuera
+
+  function exit(){
+
+    overlay.addEventListener('click',(e)=>{
+
+      if (menu.style.display=='block') {
+        overlay.classList.remove('overlay');
+        menu.style.display='none';
+        menu.style.opacity=0;
+      }
+    })
+  } 
+
+  exit();
 });
