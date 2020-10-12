@@ -4,6 +4,7 @@
     --dark: #22303A;
     --dark2: #263b4b;
     --gray: #F5F5F5;
+    --grayAnimationButton: #d6d2d2d7;
     --grayDark: #53575A;
     --bluePrimary: #94b7ee;
     --fontRoboto: 'Roboto', sans-serif;
@@ -74,7 +75,6 @@ section{
 
 @media(min-width:768px){
     .container{
-        background-color: #ffffff;
         width: 85%;
     }
 }
@@ -379,7 +379,7 @@ div.menu-movil span{
     padding: 0;
     margin: 0;
     z-index: 1000;
-    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .1s ease-in;
 }
 
 
@@ -575,15 +575,21 @@ div.menu-movil span{
 
 .section{
     background-color: var(--gray);
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
-.title-services{
+.section h2{
     color: var(--dark);
     font-size: 2.8rem;
     position: relative;
     width: 50%;
     margin: 0 auto;
+}
+
+@media(min-width:768px){
+    .section h2{
+        width: 25%;
+    }
 }
 
 .title-services::before{
@@ -596,7 +602,7 @@ div.menu-movil span{
     width: 100px;
     background-color: var(--dark);
     animation-name: title-services;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
@@ -624,19 +630,17 @@ div.menu-movil span{
     margin-top: 3rem;
 }
 
-.card-container{
+
+.card{
     background-color: #ffffff;
     margin-bottom: 2rem;
     box-shadow: 0px 0px 6px .2px rgba(83,87,90,0.5);
     border-radius: 5px;
 }
 
-.card{
-    padding-bottom: .4rem;
-}
-
 .card img{
     width: 100%;
+    max-width: 550px;
     margin-bottom: .4rem;
 }
 
@@ -661,9 +665,87 @@ div.menu-movil span{
 }
 
 .card .link-more{
+    display: block;
+    padding: 1rem .5rem;
     font-size: 1rem;
     text-transform: uppercase;
     color: var(--dark);
     font-weight: bold;
+    position: relative;
+    transition: all .3s ease-in;
 }
 
+
+.link-more::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--grayAnimationButton);
+}
+
+
+.link-more-bg{
+    background-color: var(--gray);
+    transition: all .1s ease-in;
+}
+
+
+@media(min-width:768px){
+    .card-zone{
+        display: flex;
+    }
+
+    .card img{
+        height: 300px;
+    }
+
+    .card-container{
+        padding: 0 1rem;
+    }
+    
+}
+
+
+/* about us */
+
+.about{
+    padding-top: .5rem !important;
+}
+
+.title-about::before{
+    content: '';
+    left: 50%;
+    top: 115%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: var(--dark);
+    animation-name: title-about;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes title-about {
+ from {
+     width: 100%;
+ }
+ to{
+     width: 0;
+ }
+}
+
+@media(min-width:768px){
+
+}
+
+.about-description{
+    margin-top: 3rem;
+}
+
+.about-description p{
+    font-size: 1rem;
+}

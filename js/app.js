@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   const btnMain= document.querySelector('#btnMain');
   const overlay= document.querySelector('#overlay');
 
+
   function toggleMenu() {
     //Identifica el boton de salir y el menú
     const btnShowMenu = document.querySelector("#btnShowMenu");
@@ -86,9 +87,9 @@ window.addEventListener("load", () => {
         setTimeout(() => {
           title.innerHTML='';
         writing(str);
-        }, 3000);
+        }, 5000);
       }
-    },200);
+    },100);
 
   }
 
@@ -110,4 +111,5 @@ window.addEventListener("load", () => {
   } 
 
   exit();
+
 });
