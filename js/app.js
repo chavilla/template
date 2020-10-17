@@ -93,7 +93,7 @@ window.addEventListener("load", () => {
 
   }
 
-  writing('Viajar es más facil con ChaviTravel');
+  writing('Viajar es más fácil con ChaviTravel');
 
 
   //Oculta el menu cuando pulsamos afuera

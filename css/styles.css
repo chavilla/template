@@ -191,89 +191,11 @@ ul.list-contact li{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        background-color: #ffffff;
         padding: 0 1rem;
     }
 }
 
 /* car y looker */
-
-div.car-looker{
-    display: flex;
-    align-items: center;
-}
-
-div.car{
-    flex-basis: 30%;
-    display: flex;
-    align-items: center;
-    padding: .6rem 0;
-    background-color: var(--bluePrimary);
-}
-
-div.car-logo{
-    flex-basis: 30%;
-    padding-left: 15px;
-}
-
-div.car-price{
-    flex-basis: 70%;
-    font-size: .9rem;
-    text-align: right;
-    margin-left: 10px;
-    padding-right: 15px;
-    color: #ffffff;
-    font-weight: bold;    
-}
-
-div.looker{
-    flex-basis: 70%;
-    margin-left: 10px;
-    display: flex;
-    padding: .4rem 0;
-    background-color: var(--gray);
-}
-
-div.looker-input{
-    border: none;
-    flex-basis: 80%;
-    background-color: var(--gray);
-}
-
-div.looker-input input{
-    padding: .5rem 0;
-    border: none;
-    background-color: var(--gray);
-}
-
-div.looker-btn{
-    flex-basis: 20%;
-    position: relative;
-}
-
-div.looker-btn button{
-    position: absolute;
-    border: none;
-    height: 100%;
-    width: 100%;
-    background: transparent;
-}
-
-div.looker-btn img{
-    height: 25px;
-    width: 25px;
-}
-
-@media(min-width:768px){
-    div.car{
-        order: 2;
-        margin-left: 20px;
-    }
-
-    div.looker{
-        order: 1;
-    }
-}
 
 .c-logo{
     padding: 1rem;
@@ -285,7 +207,6 @@ div.looker-btn img{
 }
 
 .c-car , .c-user{
-   
     display: flex;
     align-items: center !important;
     justify-content: center;
@@ -299,15 +220,16 @@ div.looker-btn img{
 @media(min-width:768px){
     .c-logo{
         order: 1;
-        flex-basis: 60%;
+        flex-basis: 90%;
     }
-    .ctn-car-looker{
+   
+    .c-car{
         order: 2;
-        flex-basis: 40%;
-
     }
 
-
+    .c-user{
+        order: 3;
+    }
 }
 
 
@@ -497,7 +419,7 @@ div.menu-movil span{
     background-image: url(../img/hero2.jpg);
     background-position: center;
     height: 100%;
-    filter: brightness(.4);
+    filter: brightness(.6);
     width: 100%;
     z-index: -1;
 }
@@ -518,15 +440,15 @@ div.menu-movil span{
 
 
 .btn-main{
-    background-color: #9E49B1;
+    background-color: #1d74d8;
     display: block;
     width: 65%;
     padding: 1rem;
     margin: 3rem auto;
     color: #ffffff;
-    font-size: .8rem;
-    text-transform: uppercase;
+    font-size: .9rem;
     transition: all .2s linear;
+    border-radius: 5px;
 }
 
 .btn-main:hover{
@@ -545,8 +467,6 @@ div.menu-movil span{
 @media(min-width:768px){
    .hero{
        min-height: 70vh;
-       width: 85%;
-       margin: 0 auto;
    }
 
    .hero-title{
