@@ -75,7 +75,7 @@ section{
 
 @media(min-width:768px){
     .container{
-        width: 85%;
+        width: 100%;
     }
 }
 
@@ -96,8 +96,8 @@ section{
 }
 
 iframe{
-    width: 15px;
-    height: 15px;
+    width: 50px;
+    height: 50px;
     border: none;
 }
 
@@ -121,7 +121,7 @@ div.container-info-contact{
 
 @media(min-width:768px){
     div.container-info-contact{
-        width: 85%;
+        width: 100%;
         padding: 0 1rem;
     }
 }
@@ -162,7 +162,7 @@ ul.list-contact li{
 
 .site-header{
     width: 100%;
-    background-color: #ffffff;
+    background-color: black;
     z-index: 1;  
 }
 
@@ -174,10 +174,8 @@ ul.list-contact li{
 
 .navbar{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  
+    display: grid;
+    grid-template-columns: 10% 60% 15% 15%;
 }
 
 @media(min-width:480px){
@@ -278,12 +276,24 @@ div.looker-btn img{
 }
 
 .c-logo{
-    padding: 1rem 0 1rem 0;
+    padding: 1rem;
 }
 
 .c-logo img{
-    height:55px;
-    width: 150px;
+    height:40px;
+    width: 90px;
+}
+
+.c-car , .c-user{
+   
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.c-car img , .c-user img{
+    height: 15px;
+    width: 15px;
 }
 
 @media(min-width:768px){
@@ -304,22 +314,13 @@ div.looker-btn img{
 .menu-zone{
     margin: 1rem auto;
     padding: 0;
-    flex-basis: 100%;
-    width: 100%;
+    flex-basis: 25%;
     display: flex;
     align-items: center;
-    background-color: var(--dark);
 }
 
-.menu-zone .col-first{
-    padding: .5rem;
-}
 
-.menu-zone .col-second{
-    background-color: var(--dark2);
-    padding: .7rem;
-    width: 100%;
-}
+
 
 .menu-zone .btn-span{
     position: relative;
@@ -337,8 +338,8 @@ div.looker-btn img{
 }
 
 div.menu-movil{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 div.menu-movil:hover{
@@ -484,7 +485,7 @@ div.menu-movil span{
 
 .hero{
     position: relative;
-    min-height: 60vh;
+    min-height: 68vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -517,7 +518,7 @@ div.menu-movil span{
 
 
 .btn-main{
-    border: 1px solid white;
+    background-color: #9E49B1;
     display: block;
     width: 65%;
     padding: 1rem;
@@ -529,7 +530,7 @@ div.menu-movil span{
 }
 
 .btn-main:hover{
-    background-color: rgba(83,87,90,0.3);
+    background-color: rgba(158,73,177,.9)
 }
 
 .translate-left{
