@@ -50,8 +50,8 @@ div.overlay{
 }
 
 ul{
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     list-style: none;
 }
 
@@ -65,7 +65,7 @@ i{
 }
 
 section{
-    padding-top: 3rem;
+   
 }
 
 .container{
@@ -168,37 +168,32 @@ ul.list-contact li{
 
 @media(min-width:768px){
     .site-header{
-        height: 80px;
+        height: 50px;
+        padding: 0;
+        position: fixed;
     }
 }
 
 .navbar{
     height: 100%;
     display: grid;
-    grid-template-columns: 10% 60% 15% 15%;
-}
-
-@media(min-width:480px){
-    .navbar{
-        grid-template-columns: 80% 20%;
-    }
+    grid-template-columns: 10% 70% 10% 10%;
+   
 }
 
 @media(min-width:768px){
     .navbar{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
+        max-height:50px;
+        display:flex;
         align-items: center;
-        padding: 0 1rem;
     }
 }
 
 /* car y looker */
-
 .c-logo{
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
 }
 
 .c-logo img{
@@ -218,17 +213,28 @@ ul.list-contact li{
 }
 
 @media(min-width:768px){
+
+
     .c-logo{
         order: 1;
-        flex-basis: 90%;
+        flex-basis: 10%;
     }
    
     .c-car{
-        order: 2;
+        order: 3;
+        flex-basis: 3%;
     }
 
     .c-user{
-        order: 3;
+        order: 4;
+        flex-basis: 3%;
+    }
+
+    .main-menu{
+        order: 2;
+        flex-basis: 80%;
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
@@ -277,7 +283,7 @@ div.menu-movil span{
     margin-bottom: 5px;
 }
 
-@media only screen and (min-width:768px){
+@media(min-width:768px){
     div.menu-zone{
         display: none;
     }
@@ -294,7 +300,8 @@ div.menu-movil span{
 .main-menu{
     position: fixed;
     top: 0;
-    min-height: 100%;
+    left: 0;
+    min-height: 100vh;
     display: none;
     width: 75%;
     background-color: var(--gray);
@@ -303,11 +310,6 @@ div.menu-movil span{
     margin: 0;
     z-index: 1000;
     transition: all .1s ease-in;
-}
-
-
-.main-menu-lg{
-    display: none;
 }
 
 .hide{
@@ -324,21 +326,17 @@ div.menu-movil span{
     width: 100%;
     text-align: center;
     font-size: 1rem;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-list a{
     color: var(--dark);
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 100%;
     padding: 1rem 0;
     
-}
-
-.menu-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .menu-list div{
@@ -364,39 +362,33 @@ div.menu-movil span{
 @media(min-width:768px){
 
     .main-menu{
-        display: none;
-    }
-
-    .parent-main-menu-lg{
-        padding: .5rem 0 1rem 0;
-    }
-
-    .main-menu-lg{
+        background-color: inherit;
+        position: static;
         display: block;
-        background-color: #ffffff;
+        min-height: 0;
     }
 
-    .menu-list-lg{
-       background-color: #22303A;
-       display: grid;
-       grid-template-columns: repeat(7,1fr);
-    }
-
-    .menu-list-lg a{
-        padding: .9rem 0;
-        text-align: center;
-        font-size: .9rem;
-        color: #ffffff;
-        transition: all .3s ease-out;
-    }
-
-    .menu-list-lg a:hover{
-        background-color: var(--gray);
-        color: var(--dark);
-    }
-
-    .menu-zone{
+    .main-menu ul div{
         display: none;
+    }
+
+    .menu-list{
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .menu-list a{
+        color: #ffffff;
+        font-size: .95rem;
+        margin: 0;
+        text-transform: uppercase;
+        flex-basis: 10%;
+    }
+
+    .menu-list a:hover{
+       color: rgb(158,73,177);
     }
 
 }
@@ -416,8 +408,8 @@ div.menu-movil span{
 
 .hero-img{
     position: absolute;
-    background-image: url(../img/hero2.jpg);
-    background-position: center;
+    background-image: url(../img/hero3.jpg);
+    background-position: center right;
     height: 100%;
     filter: brightness(.6);
     width: 100%;
@@ -440,7 +432,7 @@ div.menu-movil span{
 
 
 .btn-main{
-    background-color: #1d74d8;
+    background-color: rgb(158,73,177);
     display: block;
     width: 65%;
     padding: 1rem;
@@ -466,7 +458,7 @@ div.menu-movil span{
 
 @media(min-width:768px){
    .hero{
-       min-height: 70vh;
+       min-height: 80vh;
    }
 
    .hero-title{

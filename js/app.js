@@ -58,8 +58,9 @@ window.addEventListener("load", () => {
   // Zona de funciones anónimas
   window.onresize=function(e){
     const widthOfWindow=window.innerWidth;
+    console.log(widthOfWindow);
     if (widthOfWindow>=768) {
-      fadeOut(menu);
+      menu.style.display="block";
     }else{
       menu.style.display='none';
     }
@@ -93,7 +94,7 @@ window.addEventListener("load", () => {
 
   }
 
-  writing('Viajar es más fácil con ChaviTravel');
+  writing('Innovación Y Precios Bajos');
 
 
   //Oculta el menu cuando pulsamos afuera
