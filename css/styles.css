@@ -404,7 +404,7 @@ div.menu-movil span{
 
 .hero{
     position: relative;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -496,3 +496,43 @@ div.menu-movil span{
 
 /*  Services ----- */
 
+section.categories{
+    padding: 1rem;
+}
+
+.categories img{
+    max-width: 100%;
+}
+
+
+@media(min-width:768px){
+    .div-categories{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 20px;
+    }
+}
+.categories a.link-categories{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.categories span{
+    position: absolute;
+    background-color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem 1.3rem;
+    opacity: 0.9;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.categories span:hover{
+    
+    background-color: rgb(158,73,177);
+    color: #ffffff;
+    opacity: 1;
+}
