@@ -64,8 +64,9 @@ i{
     font-size: 2rem;
 }
 
-section{
-   
+section h2{
+   font-size: 1.8rem;
+   font-weight: 400;
 }
 
 .container{
@@ -404,7 +405,7 @@ div.menu-movil span{
 
 .hero{
     position: relative;
-    min-height: 85vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -511,6 +512,19 @@ section.categories{
         grid-template-columns: repeat(3,1fr);
         grid-column-gap: 20px;
     }
+
+    .link-categories:hover img{ 
+        transform: scale(1.1);
+        transition: all .3s ease-in;
+    }
+
+    .link-categories:hover span{
+        z-index: 1000;
+    }
+
+    .link-categories{
+        overflow: hidden;
+    }
 }
 .categories a.link-categories{
     display: flex;
@@ -535,4 +549,59 @@ section.categories{
     background-color: rgb(158,73,177);
     color: #ffffff;
     opacity: 1;
+}
+
+/* Recomendados */
+
+.card{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .card-img{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card-title{
+    font-size: .8rem;
+}
+
+.card img{
+    height: 150px;
+    max-width: 150px;
+    margin:auto;
+}
+
+.card .price{
+    margin-top: .5rem;
+    font-size: 2rem;
+    color: rgb(158,73,177);
+}
+
+.card label{
+    color: gray;
+}
+
+.card input[type="radio"]{
+    display: none;
+}
+
+.card form p:first-of-type{
+    font-size: 1rem;
+}
+
+.card form p:last-of-type{
+    color: gray;
+    margin: .3rem;
+}
+
+.card h3{
+    font-size: 1rem;
+    margin: .5rem 0;
+    font-weight: 200;
 }
