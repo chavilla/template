@@ -43,11 +43,6 @@ div.overlay{
     filter: brightness(.2);
 }
 
-@media(min-width:768px){
-    body{
-        background-color: var(--gray);
-    }
-}
 
 ul{
     margin: 0 !important;
@@ -553,11 +548,21 @@ section.categories{
 
 /* Recomendados */
 
+@media(min-width:768px){
+    .card-parent{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+
+
+section.container-card{
+    padding: 2rem 0 3rem 0;
+}
+
 .card{
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin:  2rem 1rem;
+    padding: 0 .5rem;
 }
 
 .card .card-img{
@@ -574,14 +579,69 @@ section.categories{
 .card img{
     height: 150px;
     max-width: 150px;
-    margin:auto;
+    margin: auto;
 }
 
+
 .card .price{
-    margin-top: .5rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: rgb(158,73,177);
 }
+
+.card .name{
+    font-size: .7rem;
+    margin: .5rem 0 1rem 0;
+    font-weight: lighter;
+    color: #53575A;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .btn-car{
+    background-color: rgb(158,73,177);
+    color: #ffffff;
+    border: none;
+    display: inline-block;
+    width: 50%;
+    margin: .3rem auto;
+    font-size: .9rem;
+    padding: .5rem 0;
+    cursor: pointer;
+}
+
+.card .btn-car img{
+    height: 15px;
+    width: 15px;
+}
+
+@media(min-width:768px){
+    .card{
+       
+        overflow: hidden;
+        max-height: 300px;
+        position: relative;   
+    }
+
+    .card-info{
+        background-color: #ffffff;
+
+    }
+
+    .divup{
+        transform: translateY(-50px);
+        transition: all .2s ease-in;
+    }
+
+    .divdown{
+        transform: translateY(0);
+        transition: all .2s ease-in;
+    }
+}
+
 
 .card label{
     color: gray;
@@ -604,4 +664,57 @@ section.categories{
     font-size: 1rem;
     margin: .5rem 0;
     font-weight: 200;
+}
+
+/* Seccion descuento */
+
+.banner-general{
+   position: relative;
+   height: 100%;
+}
+
+.banner-general::before{
+    content: '';
+    background-image: url("../img/ahorro.jpg");
+}
+
+.parallax::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    filter: brightness(.6);
+}
+
+
+.content-banner{
+    position: relative;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.content-banner h3{
+    color: #ffffff;
+    font-size: 8vw;
+}
+
+@media(min-width:768px){
+    .banner-general{
+        background-size: 100vh;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+    }
+    .content-banner h3{
+        font-size: 3vw;
+        font-weight: lighter;
+    }
+}
+
+.about{
+    height: 600px;
+    margin-top: 1.4rem;
 }

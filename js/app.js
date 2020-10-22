@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
   //Oculta el título y muestra a los tres segundos
   setTimeout(()=>{
     btnMain.classList.remove('translate-right');
-  },1000);
+  },300);
 
 
   //efecto máquina de escribir
@@ -112,5 +112,29 @@ window.addEventListener("load", () => {
   } 
 
   exit();
+
+
+  //Efectos para los reocmendados
+  const card=document.querySelectorAll(".card");
+
+
+  card.forEach(element=>{
+    let divInfo=element.children[1];
+    element.addEventListener('mouseout',()=>{
+      setTimeout(()=>{
+
+        divInfo.classList.add('divdown');
+        divInfo.classList.remove('divup');
+      }, 3)
+    });
+
+    element.addEventListener('mouseover',()=>{
+      let divInfo=element.children[1];
+      setTimeout(()=>{
+        divInfo.classList.add('divup');
+        divInfo.classList.remove('divdown')
+      }, 3)
+    });
+  });
 
 });
