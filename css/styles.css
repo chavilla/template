@@ -715,6 +715,73 @@ section.container-card{
 }
 
 .about{
-    height: 600px;
-    margin-top: 1.4rem;
+    margin: 1.4rem auto;
+}
+
+.about p{
+    font-size: .8rem;
+    margin-top: 1.3rem;
+    font-weight:lighter;
+    line-height: 20px;
+}
+
+
+.wrapper{
+    display: grid;
+    padding: 1rem 0;
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.desplegable-parent{
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.desplegable-parent .title-menu-footer{
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.desplegable-parent div{
+    display: flex;
+    align-items: center;
+}
+
+.desplegable-parent img{
+    width: 15px;
+    height: 15px;
+}
+
+
+
+/* footer */
+
+.footer{
+    background-color: #222222;
+    color: #ffffff;
+    padding: 1.2rem 0 .5rem 0;
+}
+
+.footer .copy{
+    padding: 1rem 0;
+    color: #F5F5F5;
+}
+
+.copy p{
+    font-size: .8rem;
+}
+
+.footer .c-logo{
+    display: flex;
+    justify-content: center;
+    padding: .7rem 0;
+}
+.credit-card {
+    padding: 1rem 0;
+}
+.credit-card img{
+    max-width: 100%;
 }
