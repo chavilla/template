@@ -728,25 +728,30 @@ section.container-card{
 
 .wrapper{
     display: grid;
-    padding: 1rem 0;
+    padding: .5rem 0;
     background-color: #303030;
     color: #ffffff;
 }
 
-.desplegable-parent{
-    padding: 1rem 0;
+.desplegable-parent {
+    position: relative;
+}
+
+.desplegable-parent .options{
+    position: absolute;
+    top: 75%;
+    display: none;
+}
+
+.desplegable-parent div:first-of-type {
+    padding: .5rem 0;
     display: grid;
     grid-template-columns: 90% 10%;
 }
 
-.cont-title-footer{
-    border: 1px solid white;
-    display: flex;
-    justify-content: flex-start;
-}
 
 .desplegable-parent .title-menu-footer{
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 200;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -792,4 +797,21 @@ section.container-card{
 }
 .credit-card img{
     max-width: 100%;
+}
+
+/* options */
+
+
+
+.showOptions{
+    height: 100%;
+}
+
+.hideOptions{
+    height: 0;
+}
+
+.options li{
+    padding: .5rem 0 .5rem .5rem;
+    font-size: .7rem;
 }

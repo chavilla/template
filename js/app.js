@@ -137,4 +137,17 @@ window.addEventListener("load", () => {
     });
   });
 
+
+  //menu options footer
+  const desplegable=document.querySelectorAll('.icon-options');
+
+  const options=document.querySelectorAll('.options');
+
+  desplegable.forEach((elem,index)=>{
+    elem.addEventListener('click', (e)=>{
+        options[index].display='block'
+    });
+
+  });
+
 });
