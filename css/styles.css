@@ -64,6 +64,12 @@ section h2{
    font-weight: 400;
 }
 
+@media(min-width:768px){
+    section h2{
+        font-size: 2.2rem;
+    }
+}
+
 .container{
     width: 90%;
     margin: 0 auto;
@@ -725,22 +731,43 @@ section.container-card{
     line-height: 20px;
 }
 
+@media(min-width:768px){
+    .about{
+        padding: 2rem 1rem;
+    }
+}
+
 
 .wrapper{
     display: grid;
-    padding: .5rem 0;
+    padding: 1rem 0;
     background-color: #303030;
     color: #ffffff;
 }
 
 .desplegable-parent {
     position: relative;
+    padding: .8rem 0;
+    border-bottom: 1px solid #8c8c8c40;
 }
 
-.desplegable-parent .options{
-    position: absolute;
-    top: 75%;
-    display: none;
+.options{
+   display: none;
+}
+
+/* options */
+
+.show-options{
+   display: block;
+}
+
+.hide-options{
+   display: none;
+}
+
+.options li{
+    padding: .5rem 0 .5rem .5rem;
+    font-size: .7rem;
 }
 
 .desplegable-parent div:first-of-type {
@@ -768,6 +795,38 @@ section.container-card{
     height: 15px;
 }
 
+@media(min-width:768px){
+
+    .wrapper .container{
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .desplegable-parent{
+        border-bottom: none;
+        padding-left: 2rem;
+    }
+
+    .desplegable-parent img{
+        display: none;
+    }
+
+    .desplegable-parent .options{
+        display: block;
+        margin-top: 1rem !important;
+    }
+
+    .options li{
+        padding: 1rem 0 .5rem 0;
+        color: gray;
+        font-size:.9rem;
+    }
+
+    .title-menu-footer{
+        font-size: 1rem !important;
+    }
+}
 
 
 /* footer */
@@ -775,23 +834,28 @@ section.container-card{
 .footer{
     background-color: #222222;
     color: #ffffff;
-    padding: 1.2rem 0 .5rem 0;
+    padding: 1rem 0 1rem 0;
+}
+
+.footer .c-logo-footer img{
+    width: 90px;
+    height: 40px;
 }
 
 .footer .copy{
-    padding: 1rem 0;
+    padding: 1rem;
     color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .copy p{
     font-size: .8rem;
+    padding: 1rem 0;
 }
 
-.footer .c-logo{
-    display: flex;
-    justify-content: center;
-    padding: .7rem 0;
-}
 .credit-card {
     padding: 1rem 0;
 }
@@ -799,19 +863,12 @@ section.container-card{
     max-width: 100%;
 }
 
-/* options */
+@media(min-width:768px){
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
 
-
-
-.showOptions{
-    height: 100%;
-}
-
-.hideOptions{
-    height: 0;
-}
-
-.options li{
-    padding: .5rem 0 .5rem .5rem;
-    font-size: .7rem;
 }
